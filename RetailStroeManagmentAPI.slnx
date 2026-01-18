@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="BussinessLayer/BussinessLayer.csproj" />
+  <Project Path="DataAccessLayer/DataAccessLayer.csproj" />
+  <Project Path="DataAccessSettings/DataAccessSettings.csproj" />
+  <Project Path="RetailStroeManagmentAPI.csproj" />
+</Solution>

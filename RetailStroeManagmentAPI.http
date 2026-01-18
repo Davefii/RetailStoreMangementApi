@@ -1,0 +1,6 @@
+@RetailStroeManagmentAPI_HostAddress = http://localhost:5096
+
+GET {{RetailStroeManagmentAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
