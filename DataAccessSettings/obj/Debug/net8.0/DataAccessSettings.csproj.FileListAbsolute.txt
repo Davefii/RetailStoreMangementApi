@@ -13,9 +13,8 @@ E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettin
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\bin\Debug\net8.0\DataAccessSettings.dll
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\bin\Debug\net8.0\DataAccessSettings.pdb
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.GeneratedMSBuildEditorConfig.editorconfig
-E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.AssemblyInfoInputs.cache
-E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.AssemblyInfo.cs
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.csproj.CoreCompileInputs.cache
+E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.sourcelink.json
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.dll
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\refint\DataAccessSettings.dll
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.pdb

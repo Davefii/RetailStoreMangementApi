@@ -20,9 +20,8 @@ E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\bin\Debug\net8.0\DataAccessSettings.pdb
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
-E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
-E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.sourcelink.json
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAcce.E67BD773.Up2Date
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll

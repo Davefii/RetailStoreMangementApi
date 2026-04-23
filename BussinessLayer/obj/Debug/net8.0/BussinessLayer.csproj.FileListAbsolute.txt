@@ -24,9 +24,8 @@ E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\b
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\bin\Debug\net8.0\DataAccessSettings.pdb
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\BussinessLayer.csproj.AssemblyReference.cache
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\BussinessLayer.GeneratedMSBuildEditorConfig.editorconfig
-E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\BussinessLayer.AssemblyInfoInputs.cache
-E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\BussinessLayer.AssemblyInfo.cs
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\BussinessLayer.csproj.CoreCompileInputs.cache
+E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\BussinessLayer.sourcelink.json
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\Bussines.E1038C4E.Up2Date
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\BussinessLayer.dll
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\BussinessLayer\obj\Debug\net8.0\refint\BussinessLayer.dll

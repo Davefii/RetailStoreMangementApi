@@ -1,19 +1,177 @@
 ﻿using BussinessLayer;
 using DataAccessLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace RetailStroeManagmentAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/RetailStoreManagmentApi")]
     public class RetailStoreApiController : ControllerBase
     {
+        //User Section
+        [Authorize(Roles = "Admin")]
+        [HttpGet("ListUsers", Name = "GetAllUsers")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public ActionResult<IEnumerable<UserDTO>> GetAllUsers()
+        {
+            var userTable = Users.GetAllUsers();
+            if (userTable.Count == 0)
+            {
+                return NotFound("No Users Found!");
+            }
+            return Ok(userTable);
+        }
+
+        [HttpGet("FindUserByID/{ID:int}", Name = "FindUserById")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public ActionResult<UserDTO> FindUserByID(int ID)
+        {
+            if (ID < 1)
+            {
+                return BadRequest($"Not accepted ID {ID}");
+            }
+
+            // Ownership Logic: Only Admin can view any user, others can only view themselves
+            if (!User.IsInRole("Admin"))
+            {
+                var currentUserIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+                if (currentUserIdClaim == null || !int.TryParse(currentUserIdClaim.Value, out int currentUserId) || currentUserId != ID)
+                {
+                    return Forbid();
+                }
+            }
+
+            UserDTO userDTO = new UserDTO();
+
+            if (DataUsers.GetUserByID(ID, ref userDTO))
+            {
+                return Ok(userDTO);
+            }
+
+
+            return NotFound($"User with ID {ID} not found.");
+        }
+        [Authorize(Roles = "Admin")]
+        [HttpPost("AddUser", Name = "AddUser")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public ActionResult<UserDTO> AddUser(UserDTO NewUser)
+        {
+            if (NewUser == null ||
+                string.IsNullOrEmpty(NewUser.UserName) ||
+                string.IsNullOrEmpty(NewUser.Password))
+            {
+                return BadRequest("Invalid User data. Username and Password are required.");
+            }
+
+            // Create User object using constructor with DTO
+            Users user = new Users(new global::DataAccessLayer.UserDTO(NewUser.ID, NewUser.UserName, NewUser.Password, NewUser.Permition, NewUser.IsActive));
+
+            // Call AddUser function
+            int newUserId = user.Addnewuser();
+
+            if (newUserId <= 0)
+            {
+                return BadRequest("Failed to add user.");
+            }
+
+            NewUser.ID = newUserId;
+            return CreatedAtAction(nameof(FindUserByID), new { ID = NewUser.ID }, NewUser);
+        }
+        [Authorize(Roles = "Admin")]
+        [HttpPut("UpdateUser/{id}", Name = "UpdateUser")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public ActionResult<UserDTO> UpdateUser(int id, UserDTO updatedUser)
+        {
+            if (id < 1)
+            {
+                return BadRequest($"Not accepted ID {id}");
+            }
+            if (updatedUser == null ||
+                string.IsNullOrEmpty(updatedUser.UserName) ||
+                string.IsNullOrEmpty(updatedUser.Password))
+            {
+                return BadRequest("Invalid User data. Username and Password are required.");
+            }
+            UserDTO existingUser = new UserDTO();
+            if (!DataUsers.GetUserByID(id, ref existingUser))
+            {
+                return NotFound($"User with ID {id} not found.");
+            }
+            updatedUser.ID = id;
+            if (DataUsers.UpdateUser(updatedUser))
+            {
+                return Ok(updatedUser);
+            }
+            return BadRequest("Failed to update user.");
+        }
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("DeleteUser/{id}", Name = "DeleteUser")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public ActionResult DeleteUser(int id)
+        {
+            if (id < 1)
+            {
+                return BadRequest($"Not accepted ID {id}");
+            }
+            if (DataUsers.DeleteUser(id))
+            {
+                return Ok($"User with ID {id} has been deleted.");
+            }
+            return NotFound($"User with ID {id} not found. no rows deleted!");
+        }
+        [Authorize(Roles = "Admin")]
+        [HttpPost("ChangePassword/{id}", Name = "ChangePassword")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public ActionResult ChangePassword(int id, [FromBody] string newPassword)
+        {
+            UserDTO userDTO = new UserDTO();
+            if (id < 1)
+            {
+                return BadRequest($"Not accepted ID {id}");
+            }
+            if (string.IsNullOrEmpty(newPassword))
+            {
+                return BadRequest("New password is required.");
+            }
+            if (Users.ChangepasswordAnyone(id, newPassword))
+            {
+                return Ok($"Password for User with ID {id} has been changed successfully.");
+            }
+            Debug.WriteLine(userDTO.Password.Length);
+            Debug.WriteLine("[" + userDTO.Password + "]");
+            return BadRequest("Failed to change password.");
+        }
+
+
         //Supplier Section
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Viewer")]
         [HttpGet("Listsuppliers", Name = "GetAllSuppliers")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<IEnumerable<SupplierDTO>> GetAllSuppliers()
         {
             List<SupplierDTO> SupplierList = Supplier.GetSuppliers();
@@ -23,11 +181,14 @@ namespace RetailStroeManagmentAPI.Controllers
             }
             return Ok(SupplierList);
         }
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
         //[HttpGet("{ID}", Name = "FindSupplierById")]
         [HttpGet("FindsuppliersByID/{ID:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<SupplierDTO> FindSupplierByID(int ID)
         {
             if (ID < 1)
@@ -42,11 +203,14 @@ namespace RetailStroeManagmentAPI.Controllers
             SupplierDTO supplierDTO = supplier.SDTO;
             return Ok(supplierDTO);
         }
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
         //[HttpGet("{SupplierName}", Name = "FindSupplierByName")]
         [HttpGet("Findsuppliers/by-name/{SupplierName}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<SupplierDTO> FindSupplierByName(string SupplierName)
         {
             if (SupplierName == "")
@@ -61,10 +225,11 @@ namespace RetailStroeManagmentAPI.Controllers
             SupplierDTO supplierDTO = supplier.SDTO;
             return Ok(supplierDTO);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost("Addsuppliers", Name = "AddSupplier")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<SupplierDTO> AddSupplier(SupplierDTO NewSupplier)
         {
             if (NewSupplier == null ||
@@ -87,12 +252,13 @@ namespace RetailStroeManagmentAPI.Controllers
             NewSupplier.ID = supplier.ID;
             return CreatedAtAction("FindSupplierById", new {ID = NewSupplier.ID}, NewSupplier);
         }
-
+        [Authorize(Roles = "Admin")]
         //here we use http put method for update
         [HttpPut("Updatesuppliers/{id}", Name = "UpdateSupplier")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<SupplierDTO> UpdateSupplier(int id, SupplierDTO updatedSupplier)
         {
             if (updatedSupplier == null ||
@@ -131,11 +297,12 @@ namespace RetailStroeManagmentAPI.Controllers
             //we return the DTO not the full student object.
             return Ok(supplier.SDTO);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpDelete("Deletesuppliers/{id}", Name = "DeleteSupplier")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult DeleteSpplier(int id)
         {
             if (id < 1)
@@ -149,11 +316,14 @@ namespace RetailStroeManagmentAPI.Controllers
             else
                 return NotFound($"Supplier with ID {id} not found. no rows deleted!");
         }
-
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Viewer")]
         //Product Section
         [HttpGet("ListProducts", Name = "GetAllProducts")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<IEnumerable<ProductDTO>> GetAllProducts()
         {
             List<ProductDTO> ProdcutsList = Products.GetAllProducts();
@@ -163,11 +333,13 @@ namespace RetailStroeManagmentAPI.Controllers
             }
             return Ok(ProdcutsList);
         }
-
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
         [HttpGet("FindproductsByID/{ID:int}", Name = "FindProductById")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<ProductDTO> FindProductByID(int ID)
         {
             if (ID < 1)
@@ -182,10 +354,13 @@ namespace RetailStroeManagmentAPI.Controllers
             ProductDTO ProductDTO = product.PDTO;
             return Ok(ProductDTO);
         }
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
         [HttpGet("Findproducts/by-name/{ProductName}", Name = "FindProductByName")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<ProductDTO> FindProductByName(string ProductName)
         {
             if (string.IsNullOrWhiteSpace(ProductName))
@@ -200,10 +375,12 @@ namespace RetailStroeManagmentAPI.Controllers
             ProductDTO ProductDTO = product.PDTO;
             return Ok(ProductDTO);
         }
-
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
         [HttpPost("Addproducts",Name = "AddProduct")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<ProductDTO> AddProduct(ProductDTO NewProduct)
         {
             if (NewProduct == null ||
@@ -225,10 +402,12 @@ namespace RetailStroeManagmentAPI.Controllers
         }
 
         //here we use http put method for update
+        [Authorize(Roles = "Admin")]
         [HttpPut("Updateproducts/{id}", Name = "UpdateProduct")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<ProductDTO> UpdateProduct(int ID, ProductDTO updatedProduct)
         {
             if (updatedProduct == null ||
@@ -257,11 +436,13 @@ namespace RetailStroeManagmentAPI.Controllers
 
             return Ok(product.PDTO);
         }
-
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
         [HttpDelete("Deleteproducts/{id}", Name = "DeleteProduct")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult DeleteProduct(int id)
         {
             if (id < 1)
@@ -278,9 +459,13 @@ namespace RetailStroeManagmentAPI.Controllers
 
 
         //Sales Section
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Viewer")]
         [HttpGet("Listsales",Name = "GetAllSales")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<IEnumerable<SalesDTO>> GetAllSales()
         {
             List<SalesDTO> SalesList = Sales.GetAllSeles();
@@ -290,11 +475,14 @@ namespace RetailStroeManagmentAPI.Controllers
             }
             return Ok(SalesList);
         }
-
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Viewer")]
         [HttpGet("FindsalesByID/{ID:int}", Name = "FindSaleById")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<SalesDTO> FindSaleByID(int ID)
         {
             if (ID < 1)
@@ -309,10 +497,12 @@ namespace RetailStroeManagmentAPI.Controllers
             SalesDTO salesDTO = sale.SalesDTO;
             return Ok(salesDTO);
         }
-
+        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "StaffOrCashier")]
         [HttpPost("AddSale",Name = "AddSale")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<SalesDTO> AddSale(SalesDTO NewSale)
         {
             if (NewSale == null || NewSale.Product_ID == 0 && NewSale.Quantity == 0 && NewSale.User_ID == 0 || NewSale.Product_ID == 0 || NewSale.Quantity == 0 || NewSale.User_ID == 0)
@@ -324,7 +514,7 @@ namespace RetailStroeManagmentAPI.Controllers
             NewSale.ID = sale.ID;
             return CreatedAtAction(nameof(FindSaleByID), new { ID = NewSale.ID }, NewSale);
         }
-
+        
         [HttpGet("sales/total", Name = "Get_Total_Sales")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
