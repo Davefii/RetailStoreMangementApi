@@ -1,5 +1,82 @@
 [
   {
+    "ContainingType": "RetailStroeManagmentAPI.Controllers.Login",
+    "Method": "LoginUser",
+    "RelativePath": "api/Login/LoginUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUserRequest",
+        "Type": "DataAccessLayer.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DataAccessLayer.UserDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ],
+    "EndpointName": "LoginUser"
+  },
+  {
+    "ContainingType": "RetailStroeManagmentAPI.Controllers.Login",
+    "Method": "Logout",
+    "RelativePath": "api/Login/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RetailStroeManagmentAPI.DTO.Auth.LogoutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RetailStroeManagmentAPI.Controllers.Login",
+    "Method": "Refresh",
+    "RelativePath": "api/Login/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RetailStroeManagmentAPI.DTO.Auth.RefreshRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RetailStroeManagmentAPI.Controllers.RetailStoreApiController",
     "Method": "AddProduct",
     "RelativePath": "api/RetailStoreManagmentApi/Addproducts",
@@ -1068,94 +1145,5 @@
       }
     ],
     "EndpointName": "UpdateUser"
-  },
-  {
-    "ContainingType": "RetailStroeManagmentAPI.Controllers.Login",
-    "Method": "LoginUser",
-    "RelativePath": "LoginUser",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ID",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Password",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Permition",
-        "Type": "System.Byte",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsActive",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "DataAccessLayer.UserDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 400
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 404
-      }
-    ],
-    "EndpointName": "LoginUser"
-  },
-  {
-    "ContainingType": "RetailStroeManagmentAPI.Controllers.Login",
-    "Method": "Logout",
-    "RelativePath": "logout",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RetailStroeManagmentAPI.DTO.Auth.LogoutRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RetailStroeManagmentAPI.Controllers.Login",
-    "Method": "Refresh",
-    "RelativePath": "refresh",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RetailStroeManagmentAPI.DTO.Auth.RefreshRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   }
 ]

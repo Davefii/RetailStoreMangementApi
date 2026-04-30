@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI.csproj": {}
+    "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\RetailStroeManagmentAPI.csproj": {}
   },
   "projects": {
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj": {
+    "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\BussinessLayer\\BussinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\BussinessLayer\\BussinessLayer.csproj",
         "projectName": "BussinessLayer",
-        "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj",
+        "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\BussinessLayer\\BussinessLayer.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\BussinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\BussinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,223 +33,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
-      },
-      "frameworks": {
-        "net8.0": {
-          "framework": "net8.0",
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj",
-        "projectName": "DataAccessLayer",
-        "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessLayer\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "framework": "net8.0",
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj": {
-                "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
-      },
-      "frameworks": {
-        "net8.0": {
-          "framework": "net8.0",
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[6.1.3, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj",
-        "projectName": "DataAccessSettings",
-        "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\DataAccessSettings\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "framework": "net8.0",
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
-      },
-      "frameworks": {
-        "net8.0": {
-          "framework": "net8.0",
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj",
-        "projectName": "BussinessLayer",
-        "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\BussinessLayer\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "framework": "net8.0",
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -292,18 +77,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -325,8 +110,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj": {
-                "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj"
+              "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj": {
+                "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj"
               }
             }
           }
@@ -373,18 +158,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj": {
+    "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj",
         "projectName": "DataAccessSettings",
-        "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj",
+        "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -440,18 +225,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI.csproj": {
+    "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\RetailStroeManagmentAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\RetailStroeManagmentAPI.csproj",
         "projectName": "RetailStroeManagmentAPI",
-        "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI.csproj",
+        "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\RetailStroeManagmentAPI.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -473,11 +258,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\source\\repos\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj": {
-                "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj"
-              },
-              "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj": {
-                "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj"
+              "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\BussinessLayer\\BussinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\BussinessLayer\\BussinessLayer.csproj"
               }
             }
           }
@@ -531,7 +313,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

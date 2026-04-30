@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aTVzABG9DmU=",
+  "dgSpecHash": "9PWcCP5vDew=",
   "success": true,
-  "projectFilePath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\RetailStroeManagmentAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

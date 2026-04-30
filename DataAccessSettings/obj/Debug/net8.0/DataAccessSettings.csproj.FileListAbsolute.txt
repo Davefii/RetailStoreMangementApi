@@ -19,3 +19,13 @@ E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettin
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\refint\DataAccessSettings.dll
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.pdb
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessSettings\obj\Debug\net8.0\ref\DataAccessSettings.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\bin\Debug\net8.0\DataAccessSettings.deps.json
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\bin\Debug\net8.0\DataAccessSettings.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\bin\Debug\net8.0\DataAccessSettings.pdb
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.sourcelink.json
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\obj\Debug\net8.0\refint\DataAccessSettings.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\obj\Debug\net8.0\DataAccessSettings.pdb
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessSettings\obj\Debug\net8.0\ref\DataAccessSettings.dll

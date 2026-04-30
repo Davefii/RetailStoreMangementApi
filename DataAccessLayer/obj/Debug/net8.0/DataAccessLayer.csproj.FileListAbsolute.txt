@@ -27,3 +27,17 @@ E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
 E:\source\repos\RetailStroeManagmentAPI\RetailStroeManagmentAPI\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\bin\Debug\net8.0\DataAccessSettings.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\bin\Debug\net8.0\DataAccessSettings.pdb
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.sourcelink.json
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\DataAcce.E67BD773.Up2Date
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll

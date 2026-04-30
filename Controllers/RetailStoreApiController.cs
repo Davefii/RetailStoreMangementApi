@@ -165,9 +165,7 @@ namespace RetailStroeManagmentAPI.Controllers
 
 
         //Supplier Section
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
-        [Authorize(Roles = "Viewer")]
+        [Authorize(Roles = "Admin,StaffOrCashier,Viewer")]
         [HttpGet("Listsuppliers", Name = "GetAllSuppliers")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -181,8 +179,7 @@ namespace RetailStroeManagmentAPI.Controllers
             }
             return Ok(SupplierList);
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Admin,StaffOrCashier")]
         //[HttpGet("{ID}", Name = "FindSupplierById")]
         [HttpGet("FindsuppliersByID/{ID:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -203,8 +200,7 @@ namespace RetailStroeManagmentAPI.Controllers
             SupplierDTO supplierDTO = supplier.SDTO;
             return Ok(supplierDTO);
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Admin,StaffOrCashier")]
         //[HttpGet("{SupplierName}", Name = "FindSupplierByName")]
         [HttpGet("Findsuppliers/by-name/{SupplierName}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -316,9 +312,7 @@ namespace RetailStroeManagmentAPI.Controllers
             else
                 return NotFound($"Supplier with ID {id} not found. no rows deleted!");
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
-        [Authorize(Roles = "Viewer")]
+        [Authorize(Roles = "Admin,StaffOrCashier,Viewer")]
         //Product Section
         [HttpGet("ListProducts", Name = "GetAllProducts")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -354,8 +348,7 @@ namespace RetailStroeManagmentAPI.Controllers
             ProductDTO ProductDTO = product.PDTO;
             return Ok(ProductDTO);
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Admin,StaffOrCashier")]
         [HttpGet("Findproducts/by-name/{ProductName}", Name = "FindProductByName")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -375,8 +368,7 @@ namespace RetailStroeManagmentAPI.Controllers
             ProductDTO ProductDTO = product.PDTO;
             return Ok(ProductDTO);
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Admin,StaffOrCashier")]
         [HttpPost("Addproducts",Name = "AddProduct")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -436,8 +428,7 @@ namespace RetailStroeManagmentAPI.Controllers
 
             return Ok(product.PDTO);
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Admin,StaffOrCashier")]
         [HttpDelete("Deleteproducts/{id}", Name = "DeleteProduct")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -459,9 +450,7 @@ namespace RetailStroeManagmentAPI.Controllers
 
 
         //Sales Section
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
-        [Authorize(Roles = "Viewer")]
+        [Authorize(Roles = "Admin,StaffOrCashier,Viewer")]
         [HttpGet("Listsales",Name = "GetAllSales")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -475,9 +464,7 @@ namespace RetailStroeManagmentAPI.Controllers
             }
             return Ok(SalesList);
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
-        [Authorize(Roles = "Viewer")]
+        [Authorize(Roles = "Admin,StaffOrCashier,Viewer")]
         [HttpGet("FindsalesByID/{ID:int}", Name = "FindSaleById")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -497,8 +484,7 @@ namespace RetailStroeManagmentAPI.Controllers
             SalesDTO salesDTO = sale.SalesDTO;
             return Ok(salesDTO);
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Admin,StaffOrCashier")]
         [HttpPost("AddSale",Name = "AddSale")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

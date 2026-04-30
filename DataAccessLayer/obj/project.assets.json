@@ -1663,11 +1663,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\DataAccessLayer.csproj",
       "projectName": "DataAccessLayer",
-      "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\DataAccessLayer.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessLayer\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1689,8 +1689,8 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj": {
-              "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj"
+            "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj": {
+              "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj"
             }
           }
         }
@@ -1737,7 +1737,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

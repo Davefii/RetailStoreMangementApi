@@ -2172,11 +2172,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\RetailStroeManagmentAPI.csproj",
       "projectName": "RetailStroeManagmentAPI",
-      "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI.csproj",
+      "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\RetailStroeManagmentAPI.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2198,11 +2198,8 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\source\\repos\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj": {
-              "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj"
-            },
-            "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj": {
-              "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\BussinessLayer\\BussinessLayer.csproj"
+            "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\BussinessLayer\\BussinessLayer.csproj": {
+              "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\BussinessLayer\\BussinessLayer.csproj"
             }
           }
         }
@@ -2256,7 +2253,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

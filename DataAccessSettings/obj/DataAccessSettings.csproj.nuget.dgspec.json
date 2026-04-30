@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj": {}
+    "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj": {}
   },
   "projects": {
-    "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj": {
+    "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj",
         "projectName": "DataAccessSettings",
-        "projectPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\DataAccessSettings.csproj",
+        "projectPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\DataAccessSettings.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\source\\repos\\RetailStroeManagmentAPI\\RetailStroeManagmentAPI\\DataAccessSettings\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\source\\repos\\Davefii\\RetailStoreMangementApi\\DataAccessSettings\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

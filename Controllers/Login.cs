@@ -12,14 +12,16 @@ using System.Text;
 
 namespace RetailStroeManagmentAPI.Controllers
 {
-
+    [Route("api/[controller]")]
+    [ApiController]
     public class Login : Controller
     {
         private readonly ILogger<Login> _logger;
-
-        public Login(ILogger<Login> logger)
+        private readonly IConfiguration _configuration;
+        public Login(ILogger<Login> logger, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
         }
 
         private static string GenerateRefreshToken()
@@ -39,6 +41,7 @@ namespace RetailStroeManagmentAPI.Controllers
                 _ => "Viewer"
             };
         }
+
         [HttpPost("LoginUser", Name = "LoginUser")]
         [EnableRateLimiting("AuthLimiter")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -54,6 +57,8 @@ namespace RetailStroeManagmentAPI.Controllers
             }
             
             var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+
+            var secretKey = _configuration["JWT_SECRET_KEY"];
 
             Users User = Users.GetUserName(loginUserRequest.UserName, loginUserRequest.Password);
 
@@ -85,7 +90,7 @@ namespace RetailStroeManagmentAPI.Controllers
             // Step 4: Create the symmetric security key used to sign the JWT.
             // This key must match the key used in JWT validation middleware.
             var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("THIS_IS_A_VERY_BNECRET_KEY_123456"));
+                Encoding.UTF8.GetBytes(secretKey));
 
 
             // Step 5: Define the signing credentials.
@@ -163,8 +168,9 @@ namespace RetailStroeManagmentAPI.Controllers
                 new Claim(ClaimTypes.Role, GetRoleFromPermission((byte)user.Permitions))
             };
 
+            var secretKey = _configuration["JWT_SECRET_KEY"];
             var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("THIS_IS_A_VERY_BNECRET_KEY_123456"));
+                Encoding.UTF8.GetBytes(secretKey));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
