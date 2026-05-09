@@ -327,8 +327,7 @@ namespace RetailStroeManagmentAPI.Controllers
             }
             return Ok(ProdcutsList);
         }
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "StaffOrCashier")]
+        [Authorize(Roles = "Admin,StaffOrCashier,Viewer")]
         [HttpGet("FindproductsByID/{ID:int}", Name = "FindProductById")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

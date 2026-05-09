@@ -170,10 +170,18 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 
+
 // Build the application.
 // After this point, services are frozen and middleware is configured.
 var app = builder.Build();
 
+//DataAccessSettings.DataAccessSettings.ConnictionString =
+//    builder.Configuration.GetConnectionString("RetailDB")
+//    ?? throw new InvalidOperationException("Connection string not found!");
+
+var connStr = builder.Configuration.GetConnectionString("RetailDB");
+Console.WriteLine("Connection String: " + connStr);
+DataAccessSettings.DataAccessSettings.ConnictionString = connStr ?? "NOT FOUND";
 
 // ===============================
 // HTTP Request Pipeline

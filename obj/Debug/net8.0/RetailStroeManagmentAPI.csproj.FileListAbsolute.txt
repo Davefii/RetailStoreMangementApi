@@ -198,3 +198,4 @@ C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\obj\Debug\net8.0\stat
 C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\obj\Debug\net8.0\RetailSt.63D7CD89.Up2Date
 C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\obj\Debug\net8.0\RetailStroeManagmentAPI.genruntimeconfig.cache
 C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\obj\Debug\net8.0\ref\RetailStroeManagmentAPI.dll
+C:\Users\Asus\source\repos\Davefii\RetailStoreMangementApi\bin\Debug\net8.0\appsettings.example.json

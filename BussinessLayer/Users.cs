@@ -123,6 +123,7 @@ namespace BussinessLayer
         public bool UpdateUser()
         {
             string passhashed = BCrypt.Net.BCrypt.HashPassword(this.Password);
+            userDTO.Password = passhashed;
             return DataUsers.UpdateUser(userDTO);
         }
         public bool DeleteUser()
